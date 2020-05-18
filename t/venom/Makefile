@@ -31,6 +31,11 @@ dot1x_eap_peap: setup global_config
 	./venom-wrapper.sh $(PFSERVERS_DIR)/dot1x_eap_peap
 	./venom-wrapper.sh $(PFSERVERS_DIR)/dot1x_eap_peap/teardown
 
+.PHONY: wired_mac_auth
+wired_mac_auth: setup global_config
+	./venom-wrapper.sh $(PFSERVERS_DIR)/wired_mac_auth
+	./venom-wrapper.sh $(PFSERVERS_DIR)/wired_mac_auth/teardown
+
 .PHONY: global_teardown
 global_teardown: setup
 	./venom-wrapper.sh $(PFSERVERS_DIR)/global_teardown

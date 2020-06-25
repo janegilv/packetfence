@@ -32,7 +32,7 @@ configure_and_check() {
         DOCKER_MAIN_TAG="${CI_COMMIT_TAG}"
         DOCKER_EXTRA_TAG=$(generate_maintenance_tag)
     else
-        echo "Not a release, no need to generate additionnal Docker tag"
+        echo "Not a release, no need to generate additionnal maintenance tag"
     fi
     declare -p CI_COMMIT_TAG DOCKER_MAIN_TAG DOCKER_EXTRA_TAG
     export GOVERSION
